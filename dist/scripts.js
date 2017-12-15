@@ -856,7 +856,7 @@ $(document).ready(function() {
 	};
 
 	// Set the date we're counting down to
-		var countDownDate = new Date("Dec 28, 2017 15:37:25").getTime();
+		var countDownDate = new Date("Jan 27, 2018 08:00:00").getTime();
 
 		// Update the count down every 1 second
 		var x = setInterval(function() {
@@ -910,13 +910,13 @@ function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(11.997682, 121.915627);
+    var myLatlng = new google.maps.LatLng(-6.2603665,106.9647886); 
     // 39.399872
     // -8.224454
     
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 9,
+        zoom: 18,
 
         // The latitude and longitude to center the map (always required)
         center: myLatlng,
@@ -935,12 +935,12 @@ function init() {
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
     
-    var addresses = ['Brooklyn'];
+    var addresses = ['Jl H. Muyan'];
 
     for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
+        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=true', null, function (data) {
             var p = data.results[0].geometry.location
-            var latlng = new google.maps.LatLng(p.lat, p.lng);
+            var latlng = new google.maps.LatLng(p.lat,p.lng);
             new google.maps.Marker({
                 position: latlng,
                 map: map,
