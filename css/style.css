@@ -175,7 +175,7 @@ figure {
   bottom: 0;
   right: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .fh5co-cover {
@@ -192,7 +192,7 @@ figure {
 
 .fh5co-cover .display-t {
   display: table;
-  height: 800px;
+  height: 500px;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -1365,4 +1365,9 @@ figure {
 }
 @keyframes love {
   0%{top:110%}
+}
+
+video {
+    width: 100%;
+    height: auto;
 }
